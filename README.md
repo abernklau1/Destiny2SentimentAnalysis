@@ -4,7 +4,9 @@
 
 ## Business Problem
 
-Destiny 2 has been successful in its ability to create a story that entices gamers. Now that the story is coming to a close in the next year, the idea of a new game is brought up. In order to gather a sense of the community's sentiment around Destiny 2, Bungie wants to analyze the twitter hype surrrounding Destiny 2. **The Goal**: Deliver a classification model to the stakeholder (Bungie) that can predict the sentiment of tweets involving Destiny 2. These predictions can bring light to the community's thoughts on Destiny 2. 
+Destiny 2 has been successful in its ability to create a story that entices gamers. Now that the story is coming to a close in the next year, the idea of a new game is brought up. In order to gather a sense of the community's sentiment around Destiny 2, Bungie wants to analyze the twitter hype surrrounding Destiny 2. 
+
+**The Goal**: Deliver a classification model to the stakeholder (Bungie) that can predict the sentiment of tweets involving Destiny 2. These predictions can bring light to the community's thoughts on Destiny 2. 
 
 ## Data Understanding
 
@@ -21,18 +23,24 @@ After running the text through a SentimentIntensityAnalyzer, the top occuring wo
 
 ## Results
 
-### Sentiment Analyzer Scores
+#### Sentiment Analyzer Scores
 Using the three scores obtained by the SentimentIntensityAnalyzer - positive, negative, and neutral - the tweets were overwhelmingly neutral. So the focus was steered to the positive and negative scores producing a nearly even split of positive and negative tweets.
 
-### Metric
+<img src="images/sentiment_analysis.png" width="500">
+
+#### Metric
 Accuracy takes into consideration both false positives and false negatives. This metric proved useful as we want to know both negative sentiment and positive sentiment.
 
-### Model
+#### Model
 This analysis used natural language processing so the prior processing had the greatest effect on the model's performance. Due to this A simple logistic regression model was used for classification. This model scored 79% accurate and a mean cross-val score of 78%. 
+
+<img src="images/log_model_matrix.png" width="500">
 
 ## Conclusion
 
-Due to the abundance of neutral tweets, there is no recommendation to release a new game. Although, there is time for that sentiment to change so moving forward this model could be used to monitor the Destiny community's future sentiment, monitoring bugs/glitches. 
+Due to the abundance of neutral tweets, there is no recommendation to release a new game. Although, there is time for that sentiment to change so moving forward this model could be used to monitor the Destiny community's future sentiment, monitoring bugs/glitches.
+
+<img src="images/sentiment_analysis_neu.png" width="500">
 
 ## Future Research
 
