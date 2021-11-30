@@ -49,4 +49,20 @@ Due to the abundance of neutral tweets, there is no recommendation to release a 
 
 ## Repository Structure
 
-
+```
+├── code
+│   ├── __init__.py
+│   ├── auth_and_scrape.py
+│   ├── preparation.py
+│   └── visualization.py
+├── data
+│   └── data.csv
+├── images
+│   ├── log_model_matrix.png
+│   ├── sentiment_analysis_neu.png
+│   └── sentiment_analysis.png
+├── .gitignore
+├── destiny_sentiment_analysis_pres.pdf
+├── destiny_sentiment_analysis.ipynb
+└── README.md
+```
