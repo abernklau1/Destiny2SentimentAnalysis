@@ -62,7 +62,7 @@ Due to the abundance of neutral tweets, there is no recommendation to release a 
 │   ├── sentiment_analysis_neu.png
 │   └── sentiment_analysis.png
 ├── .gitignore
-├── destiny_sentiment_analysis_pres.pdf
+├── README.md
 ├── destiny_sentiment_analysis.ipynb
-└── README.md
+└── destiny_sentiment_analysis_pres.pdf
 ```
