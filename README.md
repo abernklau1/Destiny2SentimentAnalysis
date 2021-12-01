@@ -4,7 +4,7 @@
 
 ## Business Problem
 
-Destiny 2 has been successful in its ability to create a story that entices gamers. Now that the story is coming to a close in the next year, the idea of a new game is brought up. In order to gather a sense of the community's sentiment around Destiny 2, Bungie wants to analyze the twitter hype surrrounding Destiny 2. 
+Destiny 2 has been successful in its ability to create a story and gameplay that entices gamers. Bungie has the rest of the Destiny franchise planned out and now looks toward the Destiny community on Twitter. In order to gather a sense of the community's sentiment around Destiny 2, Bungie wants to analyze the twitter hype surrrounding Destiny 2. 
 
 **The Goal**: Deliver a classification model to the stakeholder (Bungie) that can predict the sentiment of tweets involving Destiny 2. These predictions can bring light to the community's thoughts on Destiny 2. 
 
@@ -24,9 +24,9 @@ After running the text through a SentimentIntensityAnalyzer, the top occuring wo
 ## Results
 
 #### Sentiment Analyzer Scores
-Using the three scores obtained by the SentimentIntensityAnalyzer - positive, negative, and neutral - the tweets were overwhelmingly neutral. So the focus was steered to the positive and negative scores producing a nearly even split of positive and negative tweets.
+Using the three scores obtained by the SentimentIntensityAnalyzer - positive, negative, and neutral - the analyzer scored an overwhelmingly amount of neutral tweets. Reviewing the abundance of supposedly neutral tweets, these tweets had clear indication of positive and negative sentiment. This may have been due to semantic reasons. So the focus was steered to the positive and negative scores producing a nearly even split of positive and negative tweets.
 
-<img src="images/sentiment_analysis.png" width="500">
+<img src="images/double_sentiment_analysis.png" width="500">
 
 #### Metric
 Accuracy takes into consideration both false positives and false negatives. This metric proved useful as we want to know both negative sentiment and positive sentiment.
@@ -38,9 +38,7 @@ This analysis used natural language processing so the prior processing had the g
 
 ## Conclusion
 
-Due to the abundance of neutral tweets, there is no recommendation to release a new game. Although, there is time for that sentiment to change so moving forward this model could be used to monitor the Destiny community's future sentiment, monitoring bugs/glitches.
-
-<img src="images/sentiment_analysis_neu.png" width="500">
+The sentiment analysis proved there was a way to capture the concerns and wishes of the Destiny Community. It is advisable that this model be used to help quickly identify negative and positive tweets and from there identify concerns, bugs/glitches and even aspects of the game the Destiny community favorites.
 
 ## Future Research
 
@@ -58,6 +56,7 @@ Due to the abundance of neutral tweets, there is no recommendation to release a 
 ├── data
 │   └── data.csv
 ├── images
+│   ├── double_sentiment_analysis.png
 │   ├── log_model_matrix.png
 │   ├── sentiment_analysis_neu.png
 │   └── sentiment_analysis.png
