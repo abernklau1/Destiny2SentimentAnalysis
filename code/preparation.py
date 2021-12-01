@@ -109,6 +109,21 @@ def create_sentiment(dataframe):
             
     return df_probs
 
+#Creates a dataframe of the neutral tweets and matches their sentiment values
+def create_neu_df(dataframe, dataframe_probs):
+
+    #Grabs text from original dataframe 
+    dataframe.reset_index(drop=True, inplace=True)
+    df_pos = dataframe[['text']].copy(deep=True)
+
+    #Grabs sentiment values from probs dataframe
+    dataframe_probs.reset_index(drop=True, inplace=True)
+    df_pos['sentiment'] = dataframe_probs['sentiment'].copy(deep=True)
+
+    #Creates dataframe of only positive sentiment tweets
+    df_pos = df_pos[df_pos['sentiment'] == 2]
+    
+    return df_pos
 
 #Creates a dataframe of the positive tweets and matches their sentiment values
 def create_pos_df(dataframe, dataframe_probs):
@@ -126,6 +141,7 @@ def create_pos_df(dataframe, dataframe_probs):
     
     return df_pos
 
+#Creates a dataframe of the negative tweets and matches their sentiment values
 def create_neg_df(dataframe, dataframe_probs):
 
     #Grabs text from original dataframe 
