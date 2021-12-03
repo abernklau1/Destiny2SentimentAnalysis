@@ -11,7 +11,7 @@ from textblob import TextBlob
 def top_n_gram(corpus,ngram_range,n=None):
 
     #Vectorize corpus
-    vec = CountVectorizer(ngram_range=ngram_range, stop_words='english', max_df=1.0, min_df=0.01).fit(corpus)
+    vec = CountVectorizer(ngram_range=ngram_range, stop_words='english', max_df=1.0, min_df=0.01, lowercase=False).fit(corpus)
 
     #creates bag of words and finds the sums of words
     bag_of_words = vec.transform(corpus)
