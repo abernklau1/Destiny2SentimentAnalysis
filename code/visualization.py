@@ -1,4 +1,7 @@
 import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+from PIL import Image
+import numpy as np
 
 
 def pie_chart(df_probs):
@@ -39,15 +42,9 @@ def double_pie_chart(df, df2):
     ax = fig.add_subplot(121)
     positive = format(percentage(df[df['sentiment'] == 1].shape[0],df.shape[0]),'.1f')
     negative = format(percentage(df[df['sentiment'] == 0].shape[0],df.shape[0]),'.1f')
-
-    #Incase of ternary classification or visualizing neutral sentiment
     neutral = format(percentage(df[df['sentiment'] == 2].shape[0],df.shape[0]),'.1f')
 
-    labels = ['Positive ['+str(positive)+'%]','Negative ['+str(negative)+'%]', 
-    
-    #Incase of ternary classification or visualizing neutral sentiment
-    'Neutral ['+str(neutral)+'%]'
-    ]   
+    labels = ['Positive ['+str(positive)+'%]','Negative ['+str(negative)+'%]', 'Neutral ['+str(neutral)+'%]']   
 
     sizes = [positive, negative, neutral]
     colors = ['green', 'red', 'gray']
@@ -74,3 +71,25 @@ def double_pie_chart(df, df2):
 
 
     plt.show()
+
+
+def word_cloud_viz(bag_of_words):
+
+    logo_mask = np.array(Image.open("images/destiny_logo.png"))
+
+    wc = WordCloud(background_color='white', max_words=300, mask=logo_mask, colormap='bone')
+
+    # Generate a wordcloud
+    wc.generate(bag_of_words)
+
+    wc.to_file("images/logo.png")
+
+    # show
+    plt.figure(figsize=[20,10])
+    plt.imshow(wc, interpolation='bilinear')
+    plt.axis("off")
+    plt.show()
+
+
+
+

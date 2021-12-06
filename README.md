@@ -2,6 +2,12 @@
 
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages7.alphacoders.com%2F112%2Fthumb-1920-1126860.jpg&f=1&nofb=1" width="500">
 
+## Technical Overview
+
+In this project, I have created a sentiment analysis of the Destiny community on Twitter. This involved the develop of a Binary classification model that predicts the sentiment of tweets with #destinythegame based on a target variable formulated through a SentimentIntensityAnalyzer. This project can be used to predict the current sentiment of the Destiny community as well as providing inference on the community's likes and dislikes of the current state of the game. 
+
+A list of the top words within positive and negative tweets were extracted and used to create columns that holds a count of the number of positive words and negative words within each tweet. After removing punctuation, uppercase letters, and urls sklearn's CountVectorizer was used to remove stopwords and vectorize. The majority class was used as the baseline which was 53% negative. The final model was a simple logistic regression with a thousand iterations. The final test score was 78%.
+
 ## Business Problem
 
 Destiny 2 has been successful in its ability to create a story and gameplay that entices gamers. Bungie has the rest of the Destiny franchise planned out and now looks toward the Destiny community on Twitter. In order to gather a sense of the community's sentiment around Destiny 2, Bungie wants to analyze the twitter hype surrrounding Destiny 2. 
