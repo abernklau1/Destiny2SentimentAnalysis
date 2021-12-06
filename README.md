@@ -59,6 +59,7 @@ See the full analysis in the [Jupyter Notebook](./destiny_sentiment_analysis.ipy
 ├── data
 │   └── data.csv
 ├── images
+│   ├── destiny_logo.png
 │   ├── double_sentiment_analysis.png
 │   ├── log_model_matrix.png
 │   ├── sentiment_analysis_neu.png
