@@ -60,6 +60,7 @@ See the full analysis in the [Jupyter Notebook](./destiny_sentiment_analysis.ipy
 ├── code
 │   ├── __init__.py
 │   ├── auth_and_scrape.py
+│   ├── environment.yml
 │   ├── preparation.py
 │   └── visualization.py
 ├── data
