@@ -1,4 +1,5 @@
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages7.alphacoders.com%2F112%2Fthumb-1920-1126860.jpg&f=1&nofb=1" width="500">
+
 # Destiny 2 Community Sentiment Analysis
 
 Author: **Andrew Bernklau**
