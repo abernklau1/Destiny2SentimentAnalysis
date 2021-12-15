@@ -82,7 +82,6 @@ def scrape_and_place(api):
             time.sleep(900)
 
     elif tweet_num <= 900 & tweet_num > 0:
-        
-        for i in range(0, tweet_num):
-            tweets = tweepy.Cursor(api.search_tweets, q=keyword+' lang:en -filter:retweets', until=date_req[0] + '-' + date_req[1] + '-' + date_req[2]).items(tweet_num)
-            append_to_csv(tweets, fileName='data.csv')
+ 
+        tweets = tweepy.Cursor(api.search_tweets, q=keyword+' lang:en -filter:retweets', until=date_req[0] + '-' + date_req[1] + '-' + date_req[2]).items(tweet_num)
+        append_to_csv(tweets, fileName='data.csv')
